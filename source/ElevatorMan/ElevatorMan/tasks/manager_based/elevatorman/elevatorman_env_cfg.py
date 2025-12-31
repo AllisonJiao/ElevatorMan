@@ -27,10 +27,7 @@ from isaaclab.sim.spawners.from_files.from_files_cfg import GroundPlaneCfg, UsdF
 from isaaclab.utils import configclass
 from isaaclab.utils.assets import ISAAC_NUCLEUS_DIR, ISAACLAB_NUCLEUS_DIR
 
-from source.ElevatorMan.ElevatorMan.tasks.manager_based.manipulation.place import mdp as place_mdp
 from source.ElevatorMan.ElevatorMan.tasks.manager_based.manipulation.stack import mdp
-from source.ElevatorMan.ElevatorMan.tasks.manager_based.manipulation.stack.mdp import franka_stack_events
-from source.ElevatorMan.ElevatorMan.tasks.manager_based.manipulation.stack.stack_env_cfg import ObjectTableSceneCfg
 
 # from . import mdp
 
@@ -118,53 +115,15 @@ class ObservationsCfg:
             self.enable_corruption = False
             self.concatenate_terms = False
 
-    @configclass
-    class SubtaskCfg(ObsGroup):
-        """Observations for subtask group."""
-
-        grasp = ObsTerm(
-            func=place_mdp.object_grasped,
-            params={
-                "robot_cfg": SceneEntityCfg("robot"),
-                "ee_frame_cfg": SceneEntityCfg("ee_frame"),
-                "object_cfg": SceneEntityCfg("toy_truck"),
-                "diff_threshold": 0.05,
-            },
-        )
-
-        def __post_init__(self):
-            self.enable_corruption = False
-            self.concatenate_terms = False
-
     # observation groups
     policy: PolicyCfg = PolicyCfg()
-    subtask_terms: SubtaskCfg = SubtaskCfg()
 
 
 @configclass
 class EventCfg:
     """Configuration for events."""
-
-    # reset
-    reset_cart_position = EventTerm(
-        func=mdp.reset_joints_by_offset,
-        mode="reset",
-        params={
-            "asset_cfg": SceneEntityCfg("robot", joint_names=["slider_to_cart"]),
-            "position_range": (-1.0, 1.0),
-            "velocity_range": (-0.5, 0.5),
-        },
-    )
-
-    reset_pole_position = EventTerm(
-        func=mdp.reset_joints_by_offset,
-        mode="reset",
-        params={
-            "asset_cfg": SceneEntityCfg("robot", joint_names=["cart_to_pole"]),
-            "position_range": (-0.25 * math.pi, 0.25 * math.pi),
-            "velocity_range": (-0.25 * math.pi, 0.25 * math.pi),
-        },
-    )
+    # Add event terms here if needed for your elevator scene
+    pass
 
 @configclass
 class TerminationsCfg:
@@ -220,7 +179,8 @@ class RmpFlowAgibotPlaceToy2BoxEnvCfg(ElevatormanEnvCfg):
         # post init of parent
         super().__post_init__()
 
-        self.events = EventCfg()
+        # Events are not needed for now - can be set to EventCfg() if events are added later
+        # self.events = EventCfg()
 
         # Set Agibot as robot
         self.scene.robot = AGIBOT_A2D_CFG.replace(prim_path="{ENV_REGEX_NS}/Robot")
@@ -273,14 +233,14 @@ class RmpFlowAgibotPlaceToy2BoxEnvCfg(ElevatormanEnvCfg):
             ],
         )
 
-        # add contact force sensor for grasped checking
-        self.scene.contact_grasp = ContactSensorCfg(
-            prim_path="{ENV_REGEX_NS}/Robot/right_.*_Pad_Link",
-            update_period=0.05,
-            history_length=6,
-            debug_vis=True,
-            filter_prim_paths_expr=["{ENV_REGEX_NS}/ToyTruck"],
-        )
+        # add contact force sensor for grasped checking (if needed)
+        # self.scene.contact_grasp = ContactSensorCfg(
+        #     prim_path="{ENV_REGEX_NS}/Robot/right_.*_Pad_Link",
+        #     update_period=0.05,
+        #     history_length=6,
+        #     debug_vis=True,
+        #     filter_prim_paths_expr=[],  # Add filter patterns here if needed
+        # )
 
         self.teleop_devices = DevicesCfg(
             devices={
