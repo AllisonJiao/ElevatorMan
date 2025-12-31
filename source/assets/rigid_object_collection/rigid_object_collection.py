@@ -15,9 +15,9 @@ import omni.physics.tensors.impl.api as physx
 from isaacsim.core.simulation_manager import SimulationManager
 from pxr import UsdPhysics
 
-import isaaclab.sim as sim_utils
-import isaaclab.utils.math as math_utils
-import isaaclab.utils.string as string_utils
+import source.sim as sim_utils
+import source.utils.math as math_utils
+import source.utils.string as string_utils
 
 from ..asset_base import AssetBase
 from .rigid_object_collection_data import RigidObjectCollectionData

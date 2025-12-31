@@ -8,9 +8,9 @@ import weakref
 
 import omni.physics.tensors.impl.api as physx
 
-import isaaclab.utils.math as math_utils
-from isaaclab.sim.utils.stage import get_current_stage_id
-from isaaclab.utils.buffers import TimestampedBuffer
+import source.utils.math as math_utils
+from source.sim.utils.stage import get_current_stage_id
+from source.utils.buffers import TimestampedBuffer
 
 
 class RigidObjectCollectionData:

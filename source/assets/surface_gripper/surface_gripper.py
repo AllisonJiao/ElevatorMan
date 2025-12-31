@@ -12,9 +12,9 @@ from typing import TYPE_CHECKING
 
 from isaacsim.core.utils.extensions import enable_extension
 
-import isaaclab.sim as sim_utils
-from isaaclab.assets import AssetBase
-from isaaclab.utils.version import get_isaac_sim_version
+import source.sim as sim_utils
+from source.assets import AssetBase
+from source.utils.version import get_isaac_sim_version
 
 if TYPE_CHECKING:
     from isaacsim.robot.surface_gripper import GripperView
