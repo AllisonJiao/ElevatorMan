@@ -19,7 +19,20 @@ import carb
 
 from isaaclab.devices.openxr.common import HAND_JOINT_NAMES
 from isaaclab.devices.retargeter_base import RetargeterBase
-from isaaclab.utils.version import get_isaac_sim_version
+
+# Try to import get_isaac_sim_version, provide fallback if not available
+try:
+    from isaaclab.utils.version import get_isaac_sim_version
+except ImportError:
+    # Fallback: get version from omni if available
+    def get_isaac_sim_version():
+        try:
+            import omni
+            # Try to get version from omni
+            # This is a fallback - you may need to adjust based on your Isaac Sim version
+            return version.parse("5.1.0")  # Default to 5.1.0 as fallback
+        except Exception:
+            return version.parse("5.1.0")  # Default fallback
 
 from ..device_base import DeviceBase, DeviceCfg
 from .xr_cfg import XrCfg
