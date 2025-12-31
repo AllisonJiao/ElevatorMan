@@ -185,7 +185,7 @@ class ElevatormanEnvCfg(ManagerBasedRLEnvCfg):
     episode_length_s: float = 30.0
     
     # Scene settings
-    scene: ElevatormanSceneCfg = ElevatormanSceneCfg(num_envs=4096, env_spacing=3.0, replicate_physics=False)
+    scene: ElevatormanSceneCfg = ElevatormanSceneCfg(num_envs=1, env_spacing=3.0, replicate_physics=False)
     # Basic settings
     observations: ObservationsCfg = ObservationsCfg()
     actions: ActionsCfg = ActionsCfg()
