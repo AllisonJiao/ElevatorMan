@@ -12,11 +12,17 @@ The following configurations are available:
 
 """
 
+import os
+
 import isaaclab.sim as sim_utils
 from isaaclab.actuators import ImplicitActuatorCfg
 from isaaclab.assets.articulation import ArticulationCfg
 
-ELEVATOR_ASSET_PATH = "ElevatorMan/assets/Collected_elevator_urdf/elevator.usd"
+# Get the absolute path to the elevator asset
+# This assumes the cfg directory is at the project root level
+_CUR_DIR = os.path.dirname(os.path.realpath(__file__))
+_PROJECT_ROOT = os.path.dirname(_CUR_DIR)
+ELEVATOR_ASSET_PATH = os.path.join(_PROJECT_ROOT, "assets", "Collected_elevator_urdf", "elevator.usd")
 
 ##
 # Configuration
