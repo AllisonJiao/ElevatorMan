@@ -10,8 +10,8 @@ from dataclasses import MISSING
 import isaaclab.sim as sim_utils
 from isaaclab.assets import ArticulationCfg, AssetBaseCfg, RigidObjectCfg
 from isaaclab.devices.device_base import DevicesCfg
-from isaaclab.devices.keyboard import Se3KeyboardCfg
-from isaaclab.devices.spacemouse import Se3SpaceMouseCfg
+from isaaclab.devices.keyboard import Se3Keyboard, Se3KeyboardCfg
+from isaaclab.devices.spacemouse import Se3SpaceMouse, Se3SpaceMouseCfg
 from isaaclab.envs import ManagerBasedRLEnvCfg
 from isaaclab.envs.mdp.actions.rmpflow_actions_cfg import RMPFlowActionCfg
 from isaaclab.managers import ObservationGroupCfg as ObsGroup
@@ -249,11 +249,13 @@ class RmpFlowAgibotPlaceToy2BoxEnvCfg(ElevatormanEnvCfg):
                     pos_sensitivity=0.05,
                     rot_sensitivity=0.05,
                     sim_device=self.sim.device,
+                    class_type=Se3Keyboard,  # Explicitly set class_type
                 ),
                 "spacemouse": Se3SpaceMouseCfg(
                     pos_sensitivity=0.05,
                     rot_sensitivity=0.05,
                     sim_device=self.sim.device,
+                    class_type=Se3SpaceMouse,  # Explicitly set class_type
                 ),
             }
         )

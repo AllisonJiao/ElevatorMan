@@ -9,8 +9,8 @@ import logging
 from collections.abc import Callable
 from typing import cast
 
-from isaaclab.devices import DeviceBase, DeviceCfg
-from isaaclab.devices.retargeter_base import RetargeterBase
+from source.devices import DeviceBase, DeviceCfg
+from source.devices.retargeter_base import RetargeterBase
 
 # import logger
 logger = logging.getLogger(__name__)

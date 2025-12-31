@@ -12,7 +12,7 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any
 
-from isaaclab.devices.retargeter_base import RetargeterBase, RetargeterCfg
+from source.devices.retargeter_base import RetargeterBase, RetargeterCfg
 
 
 @dataclass
