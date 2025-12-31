@@ -15,10 +15,10 @@ from typing import TYPE_CHECKING
 import omni.kit.app
 import omni.timeline
 
-from isaaclab.assets.articulation.articulation import Articulation
+from source.assets.articulation.articulation import Articulation
 
 if TYPE_CHECKING:
-    from isaaclab.envs import DirectRLEnv, ManagerBasedEnv, ViewerCfg
+    from source.envs import DirectRLEnv, ManagerBasedEnv, ViewerCfg
 
 
 class ViewportCameraController:

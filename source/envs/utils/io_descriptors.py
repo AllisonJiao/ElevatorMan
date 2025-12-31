@@ -8,11 +8,11 @@ from __future__ import annotations
 from collections.abc import Callable
 from typing import TYPE_CHECKING, Any, Concatenate, ParamSpec, TypeVar
 
-from isaaclab.utils import configclass
+from source.utils import configclass
 
 if TYPE_CHECKING:
-    from isaaclab.envs import ManagerBasedEnv
-    from isaaclab.assets.articulation import Articulation
+    from source.envs import ManagerBasedEnv
+    from source.assets.articulation import Articulation
     import torch
 
 import dataclasses

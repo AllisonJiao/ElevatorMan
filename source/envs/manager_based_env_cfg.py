@@ -11,14 +11,14 @@ configuring the environment instances, viewer settings, and simulation parameter
 
 from dataclasses import MISSING, field
 
-import isaaclab.envs.mdp as mdp
-from isaaclab.devices.device_base import DevicesCfg
-from isaaclab.devices.openxr import XrCfg
-from isaaclab.managers import EventTermCfg as EventTerm
-from isaaclab.managers import RecorderManagerBaseCfg as DefaultEmptyRecorderManagerCfg
-from isaaclab.scene import InteractiveSceneCfg
-from isaaclab.sim import SimulationCfg
-from isaaclab.utils import configclass
+import source.envs.mdp as mdp
+from source.devices.device_base import DevicesCfg
+from source.devices.openxr import XrCfg
+from source.managers import EventTermCfg as EventTerm
+from source.managers import RecorderManagerBaseCfg as DefaultEmptyRecorderManagerCfg
+from source.scene import InteractiveSceneCfg
+from source.sim import SimulationCfg
+from source.utils import configclass
 
 from .common import ViewerCfg
 from .ui import BaseEnvWindow

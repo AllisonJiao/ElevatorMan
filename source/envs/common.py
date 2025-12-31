@@ -9,7 +9,7 @@ import gymnasium as gym
 import torch
 from typing import Dict, Literal, TypeVar
 
-from isaaclab.utils import configclass
+from source.utils import configclass
 
 ##
 # Configuration.

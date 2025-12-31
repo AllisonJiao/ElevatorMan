@@ -5,11 +5,11 @@
 
 from dataclasses import MISSING
 
-from isaaclab.devices.openxr import XrCfg
-from isaaclab.scene import InteractiveSceneCfg
-from isaaclab.sim import SimulationCfg
-from isaaclab.utils import configclass
-from isaaclab.utils.noise import NoiseModelCfg
+from source.devices.openxr import XrCfg
+from source.scene import InteractiveSceneCfg
+from source.sim import SimulationCfg
+from source.utils import configclass
+from source.utils.noise import NoiseModelCfg
 
 from .common import AgentID, SpaceType, ViewerCfg
 from .ui import BaseEnvWindow

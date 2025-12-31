@@ -17,8 +17,8 @@ import omni.kit.commands
 import omni.usd
 from pxr import PhysxSchema, Sdf, Usd, UsdGeom, UsdPhysics
 
-from isaaclab.sim.utils.stage import get_current_stage
-from isaaclab.ui.widgets import ManagerLiveVisualizer
+from source.sim.utils.stage import get_current_stage
+from source.ui.widgets import ManagerLiveVisualizer
 
 if TYPE_CHECKING:
     import omni.ui

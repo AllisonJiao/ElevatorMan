@@ -11,8 +11,8 @@ Base MimicEnvCfg object for Isaac Lab Mimic data generation.
 """
 import enum
 
-from isaaclab.managers.recorder_manager import RecorderManagerBaseCfg
-from isaaclab.utils import configclass
+from source.managers.recorder_manager import RecorderManagerBaseCfg
+from source.utils import configclass
 
 
 @configclass

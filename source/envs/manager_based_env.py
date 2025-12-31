@@ -13,14 +13,14 @@ from typing import Any
 import omni.physx
 from isaacsim.core.simulation_manager import SimulationManager
 
-from isaaclab.managers import ActionManager, EventManager, ObservationManager, RecorderManager
-from isaaclab.scene import InteractiveScene
-from isaaclab.sim import SimulationContext
-from isaaclab.sim.utils.stage import attach_stage_to_usd_context, use_stage
-from isaaclab.ui.widgets import ManagerLiveVisualizer
-from isaaclab.utils.seed import configure_seed
-from isaaclab.utils.timer import Timer
-from isaaclab.utils.version import get_isaac_sim_version
+from source.managers import ActionManager, EventManager, ObservationManager, RecorderManager
+from source.scene import InteractiveScene
+from source.sim import SimulationContext
+from source.sim.utils.stage import attach_stage_to_usd_context, use_stage
+from source.ui.widgets import ManagerLiveVisualizer
+from source.utils.seed import configure_seed
+from source.utils.timer import Timer
+from source.utils.version import get_isaac_sim_version
 
 from .common import VecEnvObs
 from .manager_based_env_cfg import ManagerBasedEnvCfg
