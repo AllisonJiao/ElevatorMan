@@ -36,7 +36,7 @@ from source.ElevatorMan.ElevatorMan.tasks.manager_based.manipulation.stack impor
 from source.markers.config import FRAME_MARKER_CFG  # isort: skip
 from cfg.agibot import AGIBOT_A2D_CFG
 from cfg.elevator import ELEVATOR_CFG
-from source.controllers.cfg.rmp_flow import AGIBOT_RIGHT_ARM_RMPFLOW_CFG  # isort: skip
+from source.controllers.config.rmp_flow import AGIBOT_RIGHT_ARM_RMPFLOW_CFG  # isort: skip
 
 ##
 # Scene definition
