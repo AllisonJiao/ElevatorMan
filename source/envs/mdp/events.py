@@ -25,17 +25,17 @@ import omni.physics.tensors.impl.api as physx
 from isaacsim.core.utils.extensions import enable_extension
 from pxr import Gf, Sdf, UsdGeom, Vt
 
-import isaaclab.sim as sim_utils
+import source.sim as sim_utils
 import isaaclab.utils.math as math_utils
-from isaaclab.actuators import ImplicitActuator
-from isaaclab.assets import Articulation, DeformableObject, RigidObject
-from isaaclab.managers import EventTermCfg, ManagerTermBase, SceneEntityCfg
-from isaaclab.sim.utils.stage import get_current_stage
-from isaaclab.terrains import TerrainImporter
-from isaaclab.utils.version import compare_versions, get_isaac_sim_version
+from source.actuators import ImplicitActuator
+from source.assets import Articulation, DeformableObject, RigidObject
+from source.managers import EventTermCfg, ManagerTermBase, SceneEntityCfg
+from source.sim.utils.stage import get_current_stage
+from source.terrains import TerrainImporter
+from source.utils.version import compare_versions, get_isaac_sim_version
 
 if TYPE_CHECKING:
-    from isaaclab.envs import ManagerBasedEnv
+    from source.envs import ManagerBasedEnv
 
 # import logger
 logger = logging.getLogger(__name__)

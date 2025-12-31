@@ -14,13 +14,13 @@ from __future__ import annotations
 import torch
 from typing import TYPE_CHECKING
 
-from isaaclab.assets import Articulation, RigidObject
-from isaaclab.managers import SceneEntityCfg
-from isaaclab.sensors import ContactSensor
+from source.assets import Articulation, RigidObject
+from source.managers import SceneEntityCfg
+from source.sensors import ContactSensor
 
 if TYPE_CHECKING:
-    from isaaclab.envs import ManagerBasedRLEnv
-    from isaaclab.managers.command_manager import CommandTerm
+    from source.envs import ManagerBasedRLEnv
+    from source.managers.command_manager import CommandTerm
 
 """
 MDP terminations.
