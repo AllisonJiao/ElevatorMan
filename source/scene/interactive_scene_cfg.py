@@ -5,7 +5,7 @@
 
 from dataclasses import MISSING
 
-from isaaclab.utils.configclass import configclass
+from source.utils.configclass import configclass
 
 
 @configclass

@@ -13,8 +13,8 @@ from isaacsim.core.cloner import GridCloner
 from isaacsim.core.prims import XFormPrim
 from pxr import PhysxSchema
 
-import isaaclab.sim as sim_utils
-from isaaclab.assets import (
+import source.sim as sim_utils
+from source.assets import (
     Articulation,
     ArticulationCfg,
     AssetBaseCfg,
@@ -27,11 +27,11 @@ from isaaclab.assets import (
     SurfaceGripper,
     SurfaceGripperCfg,
 )
-from isaaclab.sensors import ContactSensorCfg, FrameTransformerCfg, SensorBase, SensorBaseCfg
-from isaaclab.sim import SimulationContext
-from isaaclab.sim.utils.stage import get_current_stage, get_current_stage_id
-from isaaclab.terrains import TerrainImporter, TerrainImporterCfg
-from isaaclab.utils.version import get_isaac_sim_version
+from source.sensors import ContactSensorCfg, FrameTransformerCfg, SensorBase, SensorBaseCfg
+from source.sim import SimulationContext
+from source.sim.utils.stage import get_current_stage, get_current_stage_id
+from source.terrains import TerrainImporter, TerrainImporterCfg
+from source.utils.version import get_isaac_sim_version
 
 from .interactive_scene_cfg import InteractiveSceneCfg
 
