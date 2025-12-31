@@ -18,12 +18,12 @@ import omni.physics.tensors.impl.api as physx
 from isaacsim.core.simulation_manager import SimulationManager
 from pxr import PhysxSchema, UsdPhysics
 
-import isaaclab.sim as sim_utils
-import isaaclab.utils.math as math_utils
-import isaaclab.utils.string as string_utils
-from isaaclab.actuators import ActuatorBase, ActuatorBaseCfg, ImplicitActuator
-from isaaclab.utils.types import ArticulationActions
-from isaaclab.utils.version import get_isaac_sim_version
+import source.sim as sim_utils
+import source.utils.math as math_utils
+import source.utils.string as string_utils
+from source.actuators import ActuatorBase, ActuatorBaseCfg, ImplicitActuator
+from source.utils.types import ArticulationActions
+from source.utils.version import get_isaac_sim_version
 
 from ..asset_base import AssetBase
 from .articulation_data import ArticulationData

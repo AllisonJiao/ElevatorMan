@@ -10,8 +10,8 @@ import weakref
 import omni.physics.tensors.impl.api as physx
 from isaacsim.core.simulation_manager import SimulationManager
 
-import isaaclab.utils.math as math_utils
-from isaaclab.utils.buffers import TimestampedBuffer
+import source.utils.math as math_utils
+from source.utils.buffers import TimestampedBuffer
 
 # import logger
 logger = logging.getLogger(__name__)

@@ -5,8 +5,8 @@
 
 from dataclasses import MISSING
 
-from isaaclab.actuators import ActuatorBaseCfg
-from isaaclab.utils import configclass
+from source.actuators import ActuatorBaseCfg
+from source.utils import configclass
 
 from ..asset_base_cfg import AssetBaseCfg
 from .articulation import Articulation

@@ -6,8 +6,8 @@
 from dataclasses import MISSING
 from typing import Literal
 
-from isaaclab.sim import SpawnerCfg
-from isaaclab.utils import configclass
+from source.sim import SpawnerCfg
+from source.utils import configclass
 
 from .asset_base import AssetBase
 
