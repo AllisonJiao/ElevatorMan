@@ -7,7 +7,7 @@
 
 import logging
 
-from isaaclab.utils import configclass
+from source.utils import configclass
 
 from .multi_mesh_ray_caster_camera import MultiMeshRayCasterCamera
 from .multi_mesh_ray_caster_cfg import MultiMeshRayCasterCfg

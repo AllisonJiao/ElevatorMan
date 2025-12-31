@@ -5,7 +5,7 @@
 
 from dataclasses import MISSING
 
-from isaaclab.utils import configclass
+from source.utils import configclass
 
 from .sensor_base import SensorBase
 

@@ -14,8 +14,8 @@ from collections.abc import Sequence
 
 import warp as wp
 
-import isaaclab.utils.math as math_utils
-from isaaclab.utils.array import TensorData, convert_to_torch
+import source.utils.math as math_utils
+from source.utils.array import TensorData, convert_to_torch
 
 """
 Depth <-> Pointcloud conversions.

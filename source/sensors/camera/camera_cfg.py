@@ -6,8 +6,8 @@
 from dataclasses import MISSING
 from typing import Literal
 
-from isaaclab.sim import FisheyeCameraCfg, PinholeCameraCfg
-from isaaclab.utils import configclass
+from source.sim import FisheyeCameraCfg, PinholeCameraCfg
+from source.utils import configclass
 
 from ..sensor_base_cfg import SensorBaseCfg
 from .camera import Camera

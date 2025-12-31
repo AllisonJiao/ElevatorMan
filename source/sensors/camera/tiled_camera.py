@@ -17,7 +17,7 @@ import warp as wp
 from isaacsim.core.prims import XFormPrim
 from pxr import UsdGeom
 
-from isaaclab.utils.warp.kernels import reshape_tiled_image
+from source.utils.warp.kernels import reshape_tiled_image
 
 from ..sensor_base import SensorBase
 from .camera import Camera

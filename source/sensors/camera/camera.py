@@ -20,16 +20,16 @@ import omni.usd
 from isaacsim.core.prims import XFormPrim
 from pxr import Sdf, UsdGeom
 
-import isaaclab.sim as sim_utils
-import isaaclab.utils.sensors as sensor_utils
-from isaaclab.utils import to_camel_case
-from isaaclab.utils.array import convert_to_torch
-from isaaclab.utils.math import (
+import source.sim as sim_utils
+import source.utils.sensors as sensor_utils
+from source.utils import to_camel_case
+from source.utils.array import convert_to_torch
+from source.utils.math import (
     convert_camera_frame_orientation_convention,
     create_rotation_matrix_from_view,
     quat_from_matrix,
 )
-from isaaclab.utils.version import get_isaac_sim_version
+from source.utils.version import get_isaac_sim_version
 
 from ..sensor_base import SensorBase
 from .camera_data import CameraData

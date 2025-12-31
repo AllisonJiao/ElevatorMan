@@ -17,10 +17,10 @@ import omni.physics.tensors.impl.api as physx
 from isaacsim.core.simulation_manager import SimulationManager
 from pxr import PhysxSchema
 
-import isaaclab.sim as sim_utils
-import isaaclab.utils.string as string_utils
-from isaaclab.markers import VisualizationMarkers
-from isaaclab.utils.math import convert_quat
+import source.sim as sim_utils
+import source.utils.string as string_utils
+from source.markers import VisualizationMarkers
+from source.utils.math import convert_quat
 
 from ..sensor_base import SensorBase
 from .contact_sensor_data import ContactSensorData

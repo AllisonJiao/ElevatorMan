@@ -6,7 +6,7 @@
 """Data container for the multi-mesh ray-cast camera sensor."""
 import torch
 
-from isaaclab.sensors.camera import CameraData
+from source.sensors.camera import CameraData
 
 from .ray_caster_data import RayCasterData
 

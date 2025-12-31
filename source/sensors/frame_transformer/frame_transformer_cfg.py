@@ -5,8 +5,8 @@
 
 from dataclasses import MISSING
 
-from isaaclab.markers.config import FRAME_MARKER_CFG, VisualizationMarkersCfg
-from isaaclab.utils import configclass
+from source.markers.config import FRAME_MARKER_CFG, VisualizationMarkersCfg
+from source.utils import configclass
 
 from ..sensor_base_cfg import SensorBaseCfg
 from .frame_transformer import FrameTransformer

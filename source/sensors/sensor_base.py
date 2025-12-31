@@ -24,8 +24,8 @@ import omni.kit.app
 import omni.timeline
 from isaacsim.core.simulation_manager import IsaacEvents, SimulationManager
 
-import isaaclab.sim as sim_utils
-from isaaclab.sim.utils.stage import get_current_stage
+import source.sim as sim_utils
+from source.sim.utils.stage import get_current_stage
 
 if TYPE_CHECKING:
     from .sensor_base_cfg import SensorBaseCfg

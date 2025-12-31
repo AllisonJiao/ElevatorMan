@@ -3,9 +3,9 @@
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
-from isaaclab.markers import VisualizationMarkersCfg
-from isaaclab.markers.config import CONTACT_SENSOR_MARKER_CFG
-from isaaclab.utils import configclass
+from source.markers import VisualizationMarkersCfg
+from source.markers.config import CONTACT_SENSOR_MARKER_CFG
+from source.utils import configclass
 
 from ..sensor_base_cfg import SensorBaseCfg
 from .contact_sensor import ContactSensor
