@@ -11,8 +11,8 @@ from typing import TYPE_CHECKING
 import omni.kit.commands
 from pxr import Gf, Sdf, Usd
 
-from isaaclab.sim import converters, schemas
-from isaaclab.sim.utils import (
+from source.sim import converters, schemas
+from source.sim.utils import (
     add_labels,
     bind_physics_material,
     bind_visual_material,
@@ -24,7 +24,7 @@ from isaaclab.sim.utils import (
     select_usd_variants,
     set_prim_visibility,
 )
-from isaaclab.utils.assets import check_usd_path_with_timeout
+from source.utils.assets import check_usd_path_with_timeout
 
 if TYPE_CHECKING:
     from . import from_files_cfg

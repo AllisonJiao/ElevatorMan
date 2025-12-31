@@ -12,8 +12,8 @@ from typing import TYPE_CHECKING
 import carb
 from pxr import Sdf, Usd
 
-import isaaclab.sim as sim_utils
-from isaaclab.sim.spawners.from_files import UsdFileCfg
+import source.sim as sim_utils
+from source.sim.spawners.from_files import UsdFileCfg
 
 if TYPE_CHECKING:
     from . import wrappers_cfg

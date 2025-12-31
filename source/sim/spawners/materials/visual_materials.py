@@ -11,9 +11,9 @@ from typing import TYPE_CHECKING
 import omni.kit.commands
 from pxr import Usd
 
-from isaaclab.sim.utils import attach_stage_to_usd_context, clone, safe_set_attribute_on_usd_prim
-from isaaclab.sim.utils.stage import get_current_stage
-from isaaclab.utils.assets import NVIDIA_NUCLEUS_DIR
+from source.sim.utils import attach_stage_to_usd_context, clone, safe_set_attribute_on_usd_prim
+from source.sim.utils.stage import get_current_stage
+from source.utils.assets import NVIDIA_NUCLEUS_DIR
 
 if TYPE_CHECKING:
     from . import visual_materials_cfg

@@ -7,7 +7,7 @@ from collections.abc import Callable
 from dataclasses import MISSING
 from typing import Literal
 
-from isaaclab.utils import configclass
+from source.utils import configclass
 
 from . import physics_materials
 

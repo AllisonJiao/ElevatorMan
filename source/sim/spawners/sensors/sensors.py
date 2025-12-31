@@ -11,8 +11,8 @@ from typing import TYPE_CHECKING
 import omni.kit.commands
 from pxr import Sdf, Usd
 
-from isaaclab.sim.utils import attach_stage_to_usd_context, clone, create_prim, get_current_stage
-from isaaclab.utils import to_camel_case
+from source.sim.utils import attach_stage_to_usd_context, clone, create_prim, get_current_stage
+from source.utils import to_camel_case
 
 if TYPE_CHECKING:
     from . import sensors_cfg

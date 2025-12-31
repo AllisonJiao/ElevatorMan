@@ -6,7 +6,7 @@
 from collections.abc import Callable
 from dataclasses import MISSING
 
-from isaaclab.utils import configclass
+from source.utils import configclass
 
 from . import visual_materials
 

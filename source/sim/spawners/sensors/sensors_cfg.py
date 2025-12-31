@@ -8,9 +8,9 @@ from __future__ import annotations
 from collections.abc import Callable
 from typing import Literal
 
-import isaaclab.utils.sensors as sensor_utils
-from isaaclab.sim.spawners.spawner_cfg import SpawnerCfg
-from isaaclab.utils import configclass
+import source.utils.sensors as sensor_utils
+from source.sim.spawners.spawner_cfg import SpawnerCfg
+from source.utils import configclass
 
 from . import sensors
 

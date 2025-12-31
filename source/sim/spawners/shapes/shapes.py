@@ -9,8 +9,8 @@ from typing import TYPE_CHECKING
 
 from pxr import Usd
 
-from isaaclab.sim import schemas
-from isaaclab.sim.utils import bind_physics_material, bind_visual_material, clone, create_prim, get_current_stage
+from source.sim import schemas
+from source.sim.utils import bind_physics_material, bind_visual_material, clone, create_prim, get_current_stage
 
 if TYPE_CHECKING:
     from . import shapes_cfg

@@ -10,8 +10,8 @@ from dataclasses import MISSING
 
 from pxr import Usd
 
-from isaaclab.sim import schemas
-from isaaclab.utils import configclass
+from source.sim import schemas
+from source.utils import configclass
 
 
 @configclass

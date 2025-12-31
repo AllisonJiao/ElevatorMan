@@ -8,11 +8,11 @@ from __future__ import annotations
 from collections.abc import Callable
 from dataclasses import MISSING
 
-from isaaclab.sim import converters, schemas
-from isaaclab.sim.spawners import materials
-from isaaclab.sim.spawners.spawner_cfg import DeformableObjectSpawnerCfg, RigidObjectSpawnerCfg, SpawnerCfg
-from isaaclab.utils import configclass
-from isaaclab.utils.assets import ISAAC_NUCLEUS_DIR
+from source.sim import converters, schemas
+from source.sim.spawners import materials
+from source.sim.spawners.spawner_cfg import DeformableObjectSpawnerCfg, RigidObjectSpawnerCfg, SpawnerCfg
+from source.utils import configclass
+from source.utils.assets import ISAAC_NUCLEUS_DIR
 
 from . import from_files
 
