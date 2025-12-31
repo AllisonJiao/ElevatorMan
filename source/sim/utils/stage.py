@@ -16,7 +16,7 @@ import omni.usd
 from isaacsim.core.utils import stage as sim_stage
 from pxr import Sdf, Usd, UsdUtils
 
-from isaaclab.utils.version import get_isaac_sim_version
+from source.utils.version import get_isaac_sim_version
 
 # import logger
 logger = logging.getLogger(__name__)

@@ -22,15 +22,15 @@ from isaacsim.core.cloner import Cloner
 from omni.usd.commands import DeletePrimsCommand, MovePrimCommand
 from pxr import PhysxSchema, Sdf, Usd, UsdGeom, UsdPhysics, UsdShade
 
-from isaaclab.utils.string import to_camel_case
-from isaaclab.utils.version import get_isaac_sim_version
+from source.utils.string import to_camel_case
+from source.utils.version import get_isaac_sim_version
 
 from .queries import find_matching_prim_paths
 from .semantics import add_labels
 from .stage import attach_stage_to_usd_context, get_current_stage, get_current_stage_id
 
 if TYPE_CHECKING:
-    from isaaclab.sim.spawners.spawner_cfg import SpawnerCfg
+    from source.sim.spawners.spawner_cfg import SpawnerCfg
 
 # import logger
 logger = logging.getLogger(__name__)

@@ -16,7 +16,7 @@ from pxr import Usd, UsdGeom
 with contextlib.suppress(ModuleNotFoundError, ImportError):
     from pxr import UsdSemantics
 
-from isaaclab.utils.version import get_isaac_sim_version
+from source.utils.version import get_isaac_sim_version
 
 from .stage import get_current_stage
 
