@@ -8,7 +8,7 @@ from typing import Literal
 
 from pxr import PhysxSchema, UsdPhysics
 
-from isaaclab.utils import configclass
+from source.utils import configclass
 
 
 @configclass

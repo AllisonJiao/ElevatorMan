@@ -15,7 +15,7 @@ import omni.physx.scripts.utils as physx_utils
 from omni.physx.scripts import deformableUtils as deformable_utils
 from pxr import PhysxSchema, Usd, UsdPhysics
 
-from isaaclab.sim.utils.stage import get_current_stage
+from source.sim.utils.stage import get_current_stage
 
 from ..utils import (
     apply_nested,
