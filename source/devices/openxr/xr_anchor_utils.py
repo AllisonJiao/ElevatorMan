@@ -19,7 +19,7 @@ from typing import Any
 logger = logging.getLogger(__name__)
 
 from isaaclab.sim import SimulationContext
-from isaaclab.sim.utils.stage import get_current_stage_id
+from source.sim.utils.stage import get_current_stage_id
 
 from .xr_cfg import XrAnchorRotationMode
 
