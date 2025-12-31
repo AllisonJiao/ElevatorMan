@@ -5,9 +5,9 @@
 
 from __future__ import annotations
 
-from isaaclab.markers import VisualizationMarkersCfg
-from isaaclab.markers.config import DEFORMABLE_TARGET_MARKER_CFG
-from isaaclab.utils import configclass
+from source.markers import VisualizationMarkersCfg
+from source.markers.config import DEFORMABLE_TARGET_MARKER_CFG
+from source.utils import configclass
 
 from ..asset_base_cfg import AssetBaseCfg
 from .deformable_object import DeformableObject

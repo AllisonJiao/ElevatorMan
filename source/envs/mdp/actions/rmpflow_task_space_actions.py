@@ -10,14 +10,14 @@ import torch
 from collections.abc import Sequence
 from typing import TYPE_CHECKING
 
-import isaaclab.utils.math as math_utils
-import isaaclab.utils.string as string_utils
-from isaaclab.assets.articulation import Articulation
-from isaaclab.controllers.rmp_flow import RmpFlowController
-from isaaclab.managers.action_manager import ActionTerm
+import source.utils.math as math_utils
+import source.utils.string as string_utils
+from source.assets.articulation import Articulation
+from source.controllers.rmp_flow import RmpFlowController
+from source.managers.action_manager import ActionTerm
 
 if TYPE_CHECKING:
-    from isaaclab.envs import ManagerBasedEnv
+    from source.envs import ManagerBasedEnv
 
     from . import rmpflow_actions_cfg
 

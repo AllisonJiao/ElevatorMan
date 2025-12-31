@@ -26,7 +26,7 @@ from isaacsim.core.utils.extensions import enable_extension
 from pxr import Gf, Sdf, UsdGeom, Vt
 
 import source.sim as sim_utils
-import isaaclab.utils.math as math_utils
+import source.utils.math as math_utils
 from source.actuators import ImplicitActuator
 from source.assets import Articulation, DeformableObject, RigidObject
 from source.managers import EventTermCfg, ManagerTermBase, SceneEntityCfg

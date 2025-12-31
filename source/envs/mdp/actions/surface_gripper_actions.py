@@ -10,11 +10,11 @@ import torch
 from collections.abc import Sequence
 from typing import TYPE_CHECKING
 
-from isaaclab.assets.surface_gripper import SurfaceGripper
-from isaaclab.managers.action_manager import ActionTerm
+from source.assets.surface_gripper import SurfaceGripper
+from source.managers.action_manager import ActionTerm
 
 if TYPE_CHECKING:
-    from isaaclab.envs import ManagerBasedEnv
+    from source.envs import ManagerBasedEnv
 
     from . import actions_cfg
 

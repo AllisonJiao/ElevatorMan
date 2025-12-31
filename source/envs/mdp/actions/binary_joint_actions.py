@@ -10,13 +10,13 @@ import torch
 from collections.abc import Sequence
 from typing import TYPE_CHECKING
 
-import isaaclab.utils.string as string_utils
-from isaaclab.assets.articulation import Articulation
-from isaaclab.managers.action_manager import ActionTerm
+import source.utils.string as string_utils
+from source.assets.articulation import Articulation
+from source.managers.action_manager import ActionTerm
 
 if TYPE_CHECKING:
-    from isaaclab.envs import ManagerBasedEnv
-    from isaaclab.envs.utils.io_descriptors import GenericActionIODescriptor
+    from source.envs import ManagerBasedEnv
+    from source.envs.utils.io_descriptors import GenericActionIODescriptor
 
     from . import actions_cfg
 

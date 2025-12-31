@@ -10,7 +10,7 @@ from __future__ import annotations
 from collections.abc import Sequence
 from typing import TYPE_CHECKING
 
-from isaaclab.managers import CommandTerm
+from source.managers import CommandTerm
 
 if TYPE_CHECKING:
     from .commands_cfg import NullCommandCfg

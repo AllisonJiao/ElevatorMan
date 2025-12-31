@@ -8,7 +8,7 @@ import os
 from isaacsim.core.utils.extensions import get_extension_path_from_name
 
 from source.controllers.rmp_flow import RmpFlowControllerCfg
-from isaaclab.utils.assets import ISAACLAB_NUCLEUS_DIR
+from source.utils.assets import ISAACLAB_NUCLEUS_DIR
 
 ISAACLAB_NUCLEUS_RMPFLOW_DIR = os.path.join(ISAACLAB_NUCLEUS_DIR, "Controllers", "RmpFlowAssets")
 

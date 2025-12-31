@@ -7,7 +7,7 @@ from __future__ import annotations
 import torch
 from collections.abc import Sequence
 
-from isaaclab.managers.recorder_manager import RecorderTerm
+from source.managers.recorder_manager import RecorderTerm
 
 
 class InitialStateRecorder(RecorderTerm):

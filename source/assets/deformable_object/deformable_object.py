@@ -14,9 +14,9 @@ import omni.physics.tensors.impl.api as physx
 from isaacsim.core.simulation_manager import SimulationManager
 from pxr import PhysxSchema, UsdShade
 
-import isaaclab.sim as sim_utils
-import isaaclab.utils.math as math_utils
-from isaaclab.markers import VisualizationMarkers
+import source.sim as sim_utils
+import source.utils.math as math_utils
+from source.markers import VisualizationMarkers
 
 from ..asset_base import AssetBase
 from .deformable_object_data import DeformableObjectData

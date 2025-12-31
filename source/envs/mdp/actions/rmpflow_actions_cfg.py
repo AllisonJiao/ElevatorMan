@@ -6,9 +6,9 @@
 
 from dataclasses import MISSING
 
-from isaaclab.controllers.rmp_flow import RmpFlowControllerCfg
-from isaaclab.managers.action_manager import ActionTerm, ActionTermCfg
-from isaaclab.utils import configclass
+from source.controllers.rmp_flow import RmpFlowControllerCfg
+from source.managers.action_manager import ActionTerm, ActionTermCfg
+from source.utils import configclass
 
 from . import rmpflow_task_space_actions
 

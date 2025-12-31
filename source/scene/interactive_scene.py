@@ -753,15 +753,17 @@ class InteractiveScene:
             elif isinstance(asset_cfg, SurfaceGripperCfg):
                 # add surface grippers to scene
                 self._surface_grippers[asset_name] = asset_cfg.class_type(asset_cfg)
-            elif isinstance(asset_cfg, SensorBaseCfg):
+            elif isinstance(asset_cfg, FrameTransformerCfg):
                 # Update target frame path(s)' regex name space for FrameTransformer
-                if isinstance(asset_cfg, FrameTransformerCfg):
-                    updated_target_frames = []
-                    for target_frame in asset_cfg.target_frames:
-                        target_frame.prim_path = target_frame.prim_path.format(ENV_REGEX_NS=self.env_regex_ns)
-                        updated_target_frames.append(target_frame)
-                    asset_cfg.target_frames = updated_target_frames
-                elif isinstance(asset_cfg, ContactSensorCfg):
+                updated_target_frames = []
+                for target_frame in asset_cfg.target_frames:
+                    target_frame.prim_path = target_frame.prim_path.format(ENV_REGEX_NS=self.env_regex_ns)
+                    updated_target_frames.append(target_frame)
+                asset_cfg.target_frames = updated_target_frames
+                self._sensors[asset_name] = asset_cfg.class_type(asset_cfg)
+            elif isinstance(asset_cfg, SensorBaseCfg):
+                # Handle other sensor types (ContactSensor, etc.)
+                if isinstance(asset_cfg, ContactSensorCfg):
                     updated_filter_prim_paths_expr = []
                     for filter_prim_path in asset_cfg.filter_prim_paths_expr:
                         updated_filter_prim_paths_expr.append(filter_prim_path.format(ENV_REGEX_NS=self.env_regex_ns))

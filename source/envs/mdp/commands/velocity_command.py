@@ -12,13 +12,13 @@ import torch
 from collections.abc import Sequence
 from typing import TYPE_CHECKING
 
-import isaaclab.utils.math as math_utils
-from isaaclab.assets import Articulation
-from isaaclab.managers import CommandTerm
-from isaaclab.markers import VisualizationMarkers
+import source.utils.math as math_utils
+from source.assets import Articulation
+from source.managers import CommandTerm
+from source.markers import VisualizationMarkers
 
 if TYPE_CHECKING:
-    from isaaclab.envs import ManagerBasedEnv
+    from source.envs import ManagerBasedEnv
 
     from .commands_cfg import NormalVelocityCommandCfg, UniformVelocityCommandCfg
 

@@ -12,18 +12,18 @@ from typing import TYPE_CHECKING
 
 from pxr import UsdPhysics
 
-import isaaclab.utils.math as math_utils
-import isaaclab.utils.string as string_utils
-from isaaclab.assets.articulation import Articulation
-from isaaclab.controllers.differential_ik import DifferentialIKController
-from isaaclab.controllers.operational_space import OperationalSpaceController
-from isaaclab.managers.action_manager import ActionTerm
-from isaaclab.sensors import ContactSensor, ContactSensorCfg, FrameTransformer, FrameTransformerCfg
-from isaaclab.sim.utils import find_matching_prims
+import source.utils.math as math_utils
+import source.utils.string as string_utils
+from source.assets.articulation import Articulation
+from source.controllers.differential_ik import DifferentialIKController
+from source.controllers.operational_space import OperationalSpaceController
+from source.managers.action_manager import ActionTerm
+from source.sensors import ContactSensor, ContactSensorCfg, FrameTransformer, FrameTransformerCfg
+from source.sim.utils import find_matching_prims
 
 if TYPE_CHECKING:
-    from isaaclab.envs import ManagerBasedEnv
-    from isaaclab.envs.utils.io_descriptors import GenericActionIODescriptor
+    from source.envs import ManagerBasedEnv
+    from source.envs.utils.io_descriptors import GenericActionIODescriptor
 
     from . import actions_cfg
 

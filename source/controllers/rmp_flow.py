@@ -18,9 +18,9 @@ enable_extension("isaacsim.robot_motion.motion_generation")
 from isaacsim.robot_motion.motion_generation import ArticulationMotionPolicy
 from isaacsim.robot_motion.motion_generation.lula.motion_policies import RmpFlow, RmpFlowSmoothed
 
-import isaaclab.sim.utils as sim_utils
-from isaaclab.utils import configclass
-from isaaclab.utils.assets import retrieve_file_path
+import source.sim.utils as sim_utils
+from source.utils import configclass
+from source.utils.assets import retrieve_file_path
 
 
 @configclass
