@@ -12,7 +12,16 @@ controllers)."""
 """Launch Isaac Sim Simulator first."""
 
 import argparse
+import os
+import sys
 from collections.abc import Callable
+
+# Add project root to Python path for imports
+# Get the directory containing this script, then go up to project root
+_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+_PROJECT_ROOT = os.path.abspath(os.path.join(_SCRIPT_DIR, "..", "..", ".."))
+if _PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, _PROJECT_ROOT)
 
 from isaaclab.app import AppLauncher
 

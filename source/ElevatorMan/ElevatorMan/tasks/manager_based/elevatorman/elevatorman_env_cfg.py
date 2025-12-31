@@ -14,7 +14,6 @@ from isaaclab.devices.keyboard import Se3KeyboardCfg
 from isaaclab.devices.spacemouse import Se3SpaceMouseCfg
 from isaaclab.envs import ManagerBasedRLEnvCfg
 from isaaclab.envs.mdp.actions.rmpflow_actions_cfg import RMPFlowActionCfg
-from isaaclab.managers import EventTermCfg as EventTerm
 from isaaclab.managers import ObservationGroupCfg as ObsGroup
 from isaaclab.managers import ObservationTermCfg as ObsTerm
 from isaaclab.managers import SceneEntityCfg
@@ -120,12 +119,6 @@ class ObservationsCfg:
 
 
 @configclass
-class EventCfg:
-    """Configuration for events."""
-    # Add event terms here if needed for your elevator scene
-    pass
-
-@configclass
 class TerminationsCfg:
     """Termination terms for the MDP."""
 
@@ -179,8 +172,7 @@ class RmpFlowAgibotPlaceToy2BoxEnvCfg(ElevatormanEnvCfg):
         # post init of parent
         super().__post_init__()
 
-        # Events are not needed for now - can be set to EventCfg() if events are added later
-        # self.events = EventCfg()
+        # Events are not needed for now - events is set to None in base class
 
         # Set Agibot as robot
         self.scene.robot = AGIBOT_A2D_CFG.replace(prim_path="{ENV_REGEX_NS}/Robot")
