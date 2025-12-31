@@ -180,6 +180,10 @@ class TerminationsCfg:
 
 @configclass
 class ElevatormanEnvCfg(ManagerBasedRLEnvCfg):
+    # Environment settings
+    decimation: int = 3
+    episode_length_s: float = 30.0
+    
     # Scene settings
     scene: ElevatormanSceneCfg = ElevatormanSceneCfg(num_envs=4096, env_spacing=3.0, replicate_physics=False)
     # Basic settings
@@ -196,7 +200,8 @@ class ElevatormanEnvCfg(ManagerBasedRLEnvCfg):
 
     def __post_init__(self):
         """Post initialization."""
-
+        # Set simulation parameters
+        self.sim.dt = 1 / 60
         self.sim.render_interval = self.decimation
 
         self.sim.physx.bounce_threshold_velocity = 0.2
