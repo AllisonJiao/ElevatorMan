@@ -175,7 +175,17 @@ class RmpFlowAgibotPlaceToy2BoxEnvCfg(ElevatormanEnvCfg):
         # Events are not needed for now - events is set to None in base class
 
         # Set Agibot as robot
-        self.scene.robot = AGIBOT_A2D_CFG.replace(prim_path="{ENV_REGEX_NS}/Robot")
+        self.scene.robot = AGIBOT_A2D_CFG.replace(
+            prim_path="/World/Agibot",
+            spawn=AGIBOT_A2D_CFG.spawn.replace(
+                scale=(1.2, 1.2, 1.2),
+            ),
+            init_state=ArticulationCfg.InitialStateCfg(
+                joint_pos=AGIBOT_A2D_CFG.init_state.joint_pos,  # preserve original joint positions
+                pos=(-2.0, -0.2, 0.0),
+                rot=(math.sqrt(0.5), 0.0, 0.0, -math.sqrt(0.5)), # (w,x,y,z)
+            ),
+        )
 
         use_relative_mode_env = os.getenv("USE_RELATIVE_MODE", "True")
         self.use_relative_mode = use_relative_mode_env.lower() in ["true", "1", "t"]
