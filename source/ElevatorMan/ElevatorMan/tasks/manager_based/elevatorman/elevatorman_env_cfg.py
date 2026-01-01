@@ -176,7 +176,7 @@ class RmpFlowAgibotPlaceToy2BoxEnvCfg(ElevatormanEnvCfg):
 
         # Set Agibot as robot
         self.scene.robot = AGIBOT_A2D_CFG.replace(
-            prim_path="/World/Agibot",
+            prim_path="{ENV_REGEX_NS}/Robot",
             spawn=AGIBOT_A2D_CFG.spawn.replace(
                 scale=(1.2, 1.2, 1.2),
             ),
