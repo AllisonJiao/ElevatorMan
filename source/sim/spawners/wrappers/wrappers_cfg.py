@@ -6,7 +6,11 @@
 from dataclasses import MISSING
 
 from source.sim.spawners.from_files import UsdFileCfg
-from source.sim.spawners.spawner_cfg import DeformableObjectSpawnerCfg, RigidObjectSpawnerCfg, SpawnerCfg
+from source.sim.spawners.spawner_cfg import (
+    DeformableObjectSpawnerCfg,
+    RigidObjectSpawnerCfg,
+    SpawnerCfg,
+)
 from source.utils import configclass
 
 from . import wrappers

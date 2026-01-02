@@ -6,11 +6,11 @@
 from __future__ import annotations
 
 import logging
-import torch
 from collections.abc import Sequence
 from typing import TYPE_CHECKING
 
 import omni.physics.tensors.impl.api as physx
+import torch
 from isaacsim.core.simulation_manager import SimulationManager
 from pxr import PhysxSchema, UsdShade
 

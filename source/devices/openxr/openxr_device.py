@@ -8,12 +8,12 @@ from __future__ import annotations
 
 import contextlib
 import logging
-import numpy as np
 from collections.abc import Callable
 from dataclasses import dataclass
 from typing import Any
 
 import carb
+import numpy as np
 
 # import logger
 logger = logging.getLogger(__name__)

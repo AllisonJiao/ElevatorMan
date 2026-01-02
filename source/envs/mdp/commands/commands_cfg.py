@@ -8,7 +8,11 @@ from dataclasses import MISSING
 
 from source.managers import CommandTermCfg
 from source.markers import VisualizationMarkersCfg
-from source.markers.config import BLUE_ARROW_X_MARKER_CFG, FRAME_MARKER_CFG, GREEN_ARROW_X_MARKER_CFG
+from source.markers.config import (
+    BLUE_ARROW_X_MARKER_CFG,
+    FRAME_MARKER_CFG,
+    GREEN_ARROW_X_MARKER_CFG,
+)
 from source.utils import configclass
 
 from .null_command import NullCommand

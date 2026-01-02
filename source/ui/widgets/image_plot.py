@@ -4,12 +4,12 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 import logging
-import numpy as np
 from contextlib import suppress
-from matplotlib import cm
-from typing import TYPE_CHECKING, Optional
+from typing import TYPE_CHECKING
 
+import numpy as np
 import omni
+from matplotlib import cm
 
 with suppress(ImportError):
     # isaacsim.gui is not available when running in headless mode.
@@ -53,7 +53,7 @@ class ImagePlot(UIWidgetWrapper):
 
     def __init__(
         self,
-        image: Optional[np.ndarray] = None,
+        image: np.ndarray | None = None,
         label: str = "",
         widget_height: int = 200,
         min_value: float = 0.0,

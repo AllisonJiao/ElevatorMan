@@ -5,7 +5,10 @@
 
 from dataclasses import MISSING
 
-from source.controllers import DifferentialIKControllerCfg, OperationalSpaceControllerCfg
+from source.controllers import (
+    DifferentialIKControllerCfg,
+    OperationalSpaceControllerCfg,
+)
 from source.managers.action_manager import ActionTerm, ActionTermCfg
 from source.utils import configclass
 

@@ -9,16 +9,15 @@ from __future__ import annotations
 
 import inspect
 import re
-import torch
 import weakref
 from abc import abstractmethod
 from collections.abc import Sequence
-from prettytable import PrettyTable
 from typing import TYPE_CHECKING, Any
 
 import omni.kit.app
-
+import torch
 from isaaclab.envs.utils.io_descriptors import GenericActionIODescriptor
+from prettytable import PrettyTable
 
 from .manager_base import ManagerBase, ManagerTermBase
 from .manager_term_cfg import ActionTermCfg

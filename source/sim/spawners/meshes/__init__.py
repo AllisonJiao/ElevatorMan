@@ -20,5 +20,18 @@ configurations to spawn different types of meshes. Based on the configuration, t
 .. _USDGeomMesh: https://openusd.org/release/api/class_usd_geom_mesh.html
 """
 
-from .meshes import spawn_mesh_capsule, spawn_mesh_cone, spawn_mesh_cuboid, spawn_mesh_cylinder, spawn_mesh_sphere
-from .meshes_cfg import MeshCapsuleCfg, MeshCfg, MeshConeCfg, MeshCuboidCfg, MeshCylinderCfg, MeshSphereCfg
+from .meshes import (
+    spawn_mesh_capsule,
+    spawn_mesh_cone,
+    spawn_mesh_cuboid,
+    spawn_mesh_cylinder,
+    spawn_mesh_sphere,
+)
+from .meshes_cfg import (
+    MeshCapsuleCfg,
+    MeshCfg,
+    MeshConeCfg,
+    MeshCuboidCfg,
+    MeshCylinderCfg,
+    MeshSphereCfg,
+)

@@ -8,10 +8,10 @@
 # needed to import for allowing type-hinting: torch.device | str | None
 from __future__ import annotations
 
-import numpy as np
-import torch
 from typing import Union
 
+import numpy as np
+import torch
 import warp as wp
 
 TensorData = Union[np.ndarray, torch.Tensor, wp.array]

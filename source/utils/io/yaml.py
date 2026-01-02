@@ -6,8 +6,8 @@
 """Utilities for file I/O with yaml."""
 
 import os
-import yaml
 
+import yaml
 from isaaclab.utils import class_to_dict
 
 

@@ -433,9 +433,8 @@ def attach_stage_to_usd_context(attaching_early: bool = False):
     import carb
     import omni.physx
     import omni.usd
-    from isaacsim.core.simulation_manager import SimulationManager
-
     from isaaclab.sim.simulation_context import SimulationContext
+    from isaacsim.core.simulation_manager import SimulationManager
 
     # if Isaac Sim version is less than 5.0, stage in memory is not supported
     if get_isaac_sim_version().major < 5:

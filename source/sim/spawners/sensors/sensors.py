@@ -11,7 +11,12 @@ from typing import TYPE_CHECKING
 import omni.kit.commands
 from pxr import Sdf, Usd
 
-from source.sim.utils import attach_stage_to_usd_context, clone, create_prim, get_current_stage
+from source.sim.utils import (
+    attach_stage_to_usd_context,
+    clone,
+    create_prim,
+    get_current_stage,
+)
 from source.utils import to_camel_case
 
 if TYPE_CHECKING:

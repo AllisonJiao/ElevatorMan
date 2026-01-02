@@ -8,14 +8,13 @@ from __future__ import annotations
 
 import math
 import random
-import torch
 from typing import TYPE_CHECKING
 
-from isaacsim.core.utils.extensions import enable_extension
-
 import isaaclab.utils.math as math_utils
+import torch
 from isaaclab.assets import Articulation, AssetBase
 from isaaclab.managers import SceneEntityCfg
+from isaacsim.core.utils.extensions import enable_extension
 
 if TYPE_CHECKING:
     from isaaclab.envs import ManagerBasedEnv

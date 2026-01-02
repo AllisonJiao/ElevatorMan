@@ -84,11 +84,11 @@ class BaseEnvWindow:
             # create main stack
             self.ui_window_elements["main_vstack"] = omni.ui.VStack(spacing=5, height=0)
             with self.ui_window_elements["main_vstack"]:
-                # create collapsable frame for simulation
+                # create collapsible frame for simulation
                 self._build_sim_frame()
-                # create collapsable frame for viewer
+                # create collapsible frame for viewer
                 self._build_viewer_frame()
-                # create collapsable frame for debug visualization
+                # create collapsible frame for debug visualization
                 self._build_debug_vis_frame()
                 with self.ui_window_elements["debug_frame"]:
                     with self.ui_window_elements["debug_vstack"]:
@@ -109,7 +109,7 @@ class BaseEnvWindow:
 
     def _build_sim_frame(self):
         """Builds the sim-related controls frame for the UI."""
-        # create collapsable frame for controls
+        # create collapsible frame for controls
         self.ui_window_elements["sim_frame"] = omni.ui.CollapsableFrame(
             title="Simulation Settings",
             width=omni.ui.Fraction(1),
@@ -153,7 +153,7 @@ class BaseEnvWindow:
 
     def _build_viewer_frame(self):
         """Build the viewer-related control frame for the UI."""
-        # create collapsable frame for viewer
+        # create collapsible frame for viewer
         self.ui_window_elements["viewer_frame"] = omni.ui.CollapsableFrame(
             title="Viewer Settings",
             width=omni.ui.Fraction(1),
@@ -220,7 +220,7 @@ class BaseEnvWindow:
         that has it implemented. If the element does not have a debug visualization implemented,
         a label is created instead.
         """
-        # create collapsable frame for debug visualization
+        # create collapsible frame for debug visualization
         self.ui_window_elements["debug_frame"] = omni.ui.CollapsableFrame(
             title="Scene Debug Visualization",
             width=omni.ui.Fraction(1),

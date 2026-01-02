@@ -5,9 +5,10 @@
 
 from __future__ import annotations
 
+from typing import Literal, TypeVar
+
 import gymnasium as gym
 import torch
-from typing import Dict, Literal, TypeVar
 
 from source.utils import configclass
 
@@ -73,7 +74,7 @@ class ViewerCfg:
 SpaceType = TypeVar("SpaceType", gym.spaces.Space, int, set, tuple, list, dict)
 """A sentinel object to indicate a valid space type to specify states, observations and actions."""
 
-VecEnvObs = Dict[str, torch.Tensor | Dict[str, torch.Tensor]]
+VecEnvObs = dict[str, torch.Tensor | dict[str, torch.Tensor]]
 """Observation returned by the environment.
 
 The observations are stored in a dictionary. The keys are the group to which the observations belong.
@@ -114,11 +115,11 @@ AgentID = TypeVar("AgentID")
 The identifier has to be an immutable object, typically a string (e.g.: ``"agent_0"``).
 """
 
-ObsType = TypeVar("ObsType", torch.Tensor, Dict[str, torch.Tensor])
+ObsType = TypeVar("ObsType", torch.Tensor, dict[str, torch.Tensor])
 """A sentinel object to indicate the data type of the observation.
 """
 
-ActionType = TypeVar("ActionType", torch.Tensor, Dict[str, torch.Tensor])
+ActionType = TypeVar("ActionType", torch.Tensor, dict[str, torch.Tensor])
 """A sentinel object to indicate the data type of the action.
 """
 
@@ -127,11 +128,11 @@ StateType = TypeVar("StateType", torch.Tensor, dict)
 """
 
 EnvStepReturn = tuple[
-    Dict[AgentID, ObsType],
-    Dict[AgentID, torch.Tensor],
-    Dict[AgentID, torch.Tensor],
-    Dict[AgentID, torch.Tensor],
-    Dict[AgentID, dict],
+    dict[AgentID, ObsType],
+    dict[AgentID, torch.Tensor],
+    dict[AgentID, torch.Tensor],
+    dict[AgentID, torch.Tensor],
+    dict[AgentID, dict],
 ]
 """The environment signals processed at the end of each step.
 

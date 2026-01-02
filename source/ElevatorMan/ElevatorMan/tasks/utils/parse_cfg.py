@@ -6,13 +6,13 @@
 """Sub-module with utilities for parsing and loading configurations."""
 
 import collections
-import gymnasium as gym
 import importlib
 import inspect
 import os
 import re
-import yaml
 
+import gymnasium as gym
+import yaml
 from isaaclab.envs import DirectRLEnvCfg, ManagerBasedRLEnvCfg
 
 

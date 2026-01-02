@@ -11,4 +11,11 @@ Please check the Omniverse documentation for `lighting overview
 """
 
 from .lights import spawn_light
-from .lights_cfg import CylinderLightCfg, DiskLightCfg, DistantLightCfg, DomeLightCfg, LightCfg, SphereLightCfg
+from .lights_cfg import (
+    CylinderLightCfg,
+    DiskLightCfg,
+    DistantLightCfg,
+    DomeLightCfg,
+    LightCfg,
+    SphereLightCfg,
+)

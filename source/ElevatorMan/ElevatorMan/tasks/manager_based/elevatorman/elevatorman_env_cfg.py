@@ -8,25 +8,22 @@ import os
 from dataclasses import MISSING
 
 import source.sim as sim_utils
-from source.assets import ArticulationCfg, AssetBaseCfg, RigidObjectCfg
+from cfg.agibot import AGIBOT_A2D_CFG
+from cfg.elevator import ELEVATOR_CFG
+from source.assets import ArticulationCfg, AssetBaseCfg
 from source.devices.device_base import DevicesCfg
 from source.devices.keyboard import Se3KeyboardCfg
 from source.devices.spacemouse import Se3SpaceMouseCfg
+from source.ElevatorMan.ElevatorMan.tasks.manager_based.manipulation.stack import mdp
 from source.envs import ManagerBasedRLEnvCfg
 from source.envs.mdp.actions.rmpflow_actions_cfg import RMPFlowActionCfg
 from source.managers import ObservationGroupCfg as ObsGroup
 from source.managers import ObservationTermCfg as ObsTerm
-from source.managers import SceneEntityCfg
 from source.managers import TerminationTermCfg as DoneTerm
 from source.scene import InteractiveSceneCfg
-from source.sensors import ContactSensorCfg, FrameTransformerCfg
+from source.sensors import FrameTransformerCfg
 from source.sensors.frame_transformer.frame_transformer_cfg import OffsetCfg
-from source.sim.schemas.schemas_cfg import MassPropertiesCfg, RigidBodyPropertiesCfg
-from source.sim.spawners.from_files.from_files_cfg import GroundPlaneCfg, UsdFileCfg
 from source.utils import configclass
-from source.utils.assets import ISAAC_NUCLEUS_DIR, ISAACLAB_NUCLEUS_DIR
-
-from source.ElevatorMan.ElevatorMan.tasks.manager_based.manipulation.stack import mdp
 
 # from . import mdp
 
@@ -34,8 +31,6 @@ from source.ElevatorMan.ElevatorMan.tasks.manager_based.manipulation.stack impor
 # Pre-defined configs
 ##
 from source.markers.config import FRAME_MARKER_CFG  # isort: skip
-from cfg.agibot import AGIBOT_A2D_CFG
-from cfg.elevator import ELEVATOR_CFG
 from source.controllers.config.rmp_flow import AGIBOT_RIGHT_ARM_RMPFLOW_CFG  # isort: skip
 
 ##
@@ -135,7 +130,7 @@ class ElevatormanEnvCfg(ManagerBasedRLEnvCfg):
     # Environment settings
     decimation: int = 3
     episode_length_s: float = 30.0
-    
+
     # Scene settings
     scene: ElevatormanSceneCfg = ElevatormanSceneCfg(num_envs=1, env_spacing=3.0, replicate_physics=False)
     # Basic settings
@@ -166,6 +161,7 @@ class ElevatormanEnvCfg(ManagerBasedRLEnvCfg):
         self.viewer.eye = [1.5, -1.0, 1.5]
         self.viewer.lookat = [0.5, 0.0, 0.0]
 
+
 class RmpFlowAgibotPlaceToy2BoxEnvCfg(ElevatormanEnvCfg):
 
     def __post_init__(self):
@@ -182,7 +178,7 @@ class RmpFlowAgibotPlaceToy2BoxEnvCfg(ElevatormanEnvCfg):
             init_state=ArticulationCfg.InitialStateCfg(
                 joint_pos=AGIBOT_A2D_CFG.init_state.joint_pos,  # preserve original joint positions
                 pos=(-2.0, -0.2, 0.0),
-                rot=(math.sqrt(0.5), 0.0, 0.0, -math.sqrt(0.5)), # (w,x,y,z)
+                rot=(math.sqrt(0.5), 0.0, 0.0, -math.sqrt(0.5)),  # (w,x,y,z)
             ),
         )
 

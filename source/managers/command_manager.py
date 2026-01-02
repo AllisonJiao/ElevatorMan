@@ -8,14 +8,14 @@
 from __future__ import annotations
 
 import inspect
-import torch
 import weakref
 from abc import abstractmethod
 from collections.abc import Sequence
-from prettytable import PrettyTable
 from typing import TYPE_CHECKING
 
 import omni.kit.app
+import torch
+from prettytable import PrettyTable
 
 from .manager_base import ManagerBase, ManagerTermBase
 from .manager_term_cfg import CommandTermCfg

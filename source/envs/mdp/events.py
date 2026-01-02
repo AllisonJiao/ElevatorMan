@@ -17,11 +17,11 @@ from __future__ import annotations
 import logging
 import math
 import re
-import torch
 from typing import TYPE_CHECKING, Literal
 
 import carb
 import omni.physics.tensors.impl.api as physx
+import torch
 from isaacsim.core.utils.extensions import enable_extension
 from pxr import Gf, Sdf, UsdGeom, Vt
 

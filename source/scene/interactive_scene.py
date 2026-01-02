@@ -4,11 +4,11 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 import logging
-import torch
 from collections.abc import Sequence
 from typing import Any
 
 import carb
+import torch
 from isaacsim.core.cloner import GridCloner
 from isaacsim.core.prims import XFormPrim
 from pxr import PhysxSchema
@@ -27,7 +27,12 @@ from source.assets import (
     SurfaceGripper,
     SurfaceGripperCfg,
 )
-from source.sensors import ContactSensorCfg, FrameTransformerCfg, SensorBase, SensorBaseCfg
+from source.sensors import (
+    ContactSensorCfg,
+    FrameTransformerCfg,
+    SensorBase,
+    SensorBaseCfg,
+)
 from source.sim import SimulationContext
 from source.sim.utils.stage import get_current_stage, get_current_stage_id
 from source.terrains import TerrainImporter, TerrainImporterCfg

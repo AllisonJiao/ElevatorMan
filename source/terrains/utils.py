@@ -9,9 +9,7 @@ from __future__ import annotations
 import numpy as np
 import torch
 import trimesh
-
 import warp as wp
-
 from isaaclab.utils.warp import raycast_mesh
 
 
@@ -80,9 +78,8 @@ def create_prim_from_mesh(prim_path: str, mesh: trimesh.Trimesh, **kwargs):
         physics_material: The physics material to apply. Defaults to None.
     """
     # need to import these here to prevent isaacsim launching when importing this module
-    from pxr import UsdGeom
-
     import isaaclab.sim as sim_utils
+    from pxr import UsdGeom
 
     # create parent prim
     sim_utils.create_prim(prim_path, "Xform")

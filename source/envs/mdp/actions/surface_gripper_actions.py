@@ -6,9 +6,10 @@
 from __future__ import annotations
 
 import logging
-import torch
 from collections.abc import Sequence
 from typing import TYPE_CHECKING
+
+import torch
 
 from source.assets.surface_gripper import SurfaceGripper
 from source.managers.action_manager import ActionTerm

@@ -3,10 +3,10 @@
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
-import torch
 import weakref
 
 import omni.physics.tensors.impl.api as physx
+import torch
 
 import source.utils.math as math_utils
 from source.sim.utils.stage import get_current_stage_id

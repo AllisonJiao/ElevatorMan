@@ -5,10 +5,11 @@
 
 from __future__ import annotations
 
-import torch
 from abc import ABC, abstractmethod
 from collections.abc import Sequence
 from typing import TYPE_CHECKING, ClassVar
+
+import torch
 
 import source.utils.string as string_utils
 from source.utils.types import ArticulationActions

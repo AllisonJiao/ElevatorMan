@@ -6,10 +6,10 @@
 from __future__ import annotations
 
 import logging
-import torch
 from collections.abc import Sequence
 from typing import TYPE_CHECKING
 
+import torch
 from pxr import UsdPhysics
 
 import source.utils.math as math_utils
@@ -18,7 +18,12 @@ from source.assets.articulation import Articulation
 from source.controllers.differential_ik import DifferentialIKController
 from source.controllers.operational_space import OperationalSpaceController
 from source.managers.action_manager import ActionTerm
-from source.sensors import ContactSensor, ContactSensorCfg, FrameTransformer, FrameTransformerCfg
+from source.sensors import (
+    ContactSensor,
+    ContactSensorCfg,
+    FrameTransformer,
+    FrameTransformerCfg,
+)
 from source.sim.utils import find_matching_prims
 
 if TYPE_CHECKING:

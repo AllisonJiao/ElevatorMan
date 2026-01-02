@@ -6,10 +6,10 @@
 
 """Utility functions for working with meshes."""
 
-import numpy as np
-import trimesh
 from collections.abc import Callable
 
+import numpy as np
+import trimesh
 from pxr import Usd, UsdGeom
 
 __all__ = [

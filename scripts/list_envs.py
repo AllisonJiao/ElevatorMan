@@ -24,10 +24,9 @@ simulation_app = app_launcher.app
 
 """Rest everything follows."""
 
+import ElevatorMan.tasks  # noqa: F401
 import gymnasium as gym
 from prettytable import PrettyTable
-
-import ElevatorMan.tasks  # noqa: F401
 
 
 def main():

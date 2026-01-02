@@ -8,14 +8,14 @@
 from __future__ import annotations
 
 import inspect
-import numpy as np
-import torch
 from collections.abc import Sequence
-from prettytable import PrettyTable
 from typing import TYPE_CHECKING
 
+import numpy as np
+import torch
 from isaaclab.utils import class_to_dict, modifiers, noise
 from isaaclab.utils.buffers import CircularBuffer
+from prettytable import PrettyTable
 
 from .manager_base import ManagerBase, ManagerTermBase
 from .manager_term_cfg import ObservationGroupCfg, ObservationTermCfg

@@ -306,7 +306,10 @@ class UrdfConverter(AssetConverterBase):
         Args:
             joint: The joint from the URDF robot model.
         """
-        from isaacsim.asset.importer.urdf._urdf import UrdfJointDriveType, UrdfJointTargetType
+        from isaacsim.asset.importer.urdf._urdf import (
+            UrdfJointDriveType,
+            UrdfJointTargetType,
+        )
 
         strength = self._urdf_interface.compute_natural_stiffness(
             self._robot_model,

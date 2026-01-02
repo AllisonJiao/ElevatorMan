@@ -10,7 +10,10 @@ from dataclasses import MISSING
 from typing import Literal
 
 from source.sim.spawners import materials
-from source.sim.spawners.spawner_cfg import DeformableObjectSpawnerCfg, RigidObjectSpawnerCfg
+from source.sim.spawners.spawner_cfg import (
+    DeformableObjectSpawnerCfg,
+    RigidObjectSpawnerCfg,
+)
 from source.utils import configclass
 
 from . import meshes

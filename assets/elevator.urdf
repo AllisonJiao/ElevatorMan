@@ -112,7 +112,7 @@
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="0.1"/>
       <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
-    </inertial> 
+    </inertial>
   </link>
 
   <joint name="button_1_0_joint" type="prismatic">
@@ -277,7 +277,7 @@
 
   <joint name="button_3_1_joint" type="prismatic">
     <parent link="cabin_link"/>
-    <child link="button_3_1_link"/> 
+    <child link="button_3_1_link"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <!-- Press direction: -Y -->
     <axis xyz="0 -1 0"/>

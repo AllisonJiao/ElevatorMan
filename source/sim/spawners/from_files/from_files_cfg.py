@@ -10,7 +10,11 @@ from dataclasses import MISSING
 
 from source.sim import converters, schemas
 from source.sim.spawners import materials
-from source.sim.spawners.spawner_cfg import DeformableObjectSpawnerCfg, RigidObjectSpawnerCfg, SpawnerCfg
+from source.sim.spawners.spawner_cfg import (
+    DeformableObjectSpawnerCfg,
+    RigidObjectSpawnerCfg,
+    SpawnerCfg,
+)
 from source.utils import configclass
 from source.utils.assets import ISAAC_NUCLEUS_DIR
 

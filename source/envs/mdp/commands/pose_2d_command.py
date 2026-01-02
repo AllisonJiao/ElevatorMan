@@ -7,15 +7,21 @@
 
 from __future__ import annotations
 
-import torch
 from collections.abc import Sequence
 from typing import TYPE_CHECKING
+
+import torch
 
 from source.assets import Articulation
 from source.managers import CommandTerm
 from source.markers import VisualizationMarkers
 from source.terrains import TerrainImporter
-from source.utils.math import quat_apply_inverse, quat_from_euler_xyz, wrap_to_pi, yaw_quat
+from source.utils.math import (
+    quat_apply_inverse,
+    quat_from_euler_xyz,
+    wrap_to_pi,
+    yaw_quat,
+)
 
 if TYPE_CHECKING:
     from source.envs import ManagerBasedEnv

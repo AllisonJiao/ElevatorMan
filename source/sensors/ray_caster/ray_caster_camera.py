@@ -6,10 +6,10 @@
 from __future__ import annotations
 
 import logging
-import torch
 from collections.abc import Sequence
 from typing import TYPE_CHECKING, ClassVar, Literal
 
+import torch
 from pxr import UsdGeom
 
 import source.utils.math as math_utils

@@ -2,7 +2,11 @@
 # All rights reserved.
 #
 # SPDX-License-Identifier: BSD-3-Clause
-from source.managers.recorder_manager import RecorderManagerBaseCfg, RecorderTerm, RecorderTermCfg
+from source.managers.recorder_manager import (
+    RecorderManagerBaseCfg,
+    RecorderTerm,
+    RecorderTermCfg,
+)
 from source.utils import configclass
 
 from . import recorders

@@ -5,8 +5,9 @@
 
 from __future__ import annotations
 
-import torch
 from typing import TYPE_CHECKING
+
+import torch
 
 from source.utils.math import apply_delta_pose, compute_pose_error
 
@@ -47,7 +48,7 @@ class DifferentialIKController:
     1. `Robot Dynamics Lecture Notes <https://ethz.ch/content/dam/ethz/special-interest/mavt/robotics-n-intelligent-systems/rsl-dam/documents/RobotDynamics2017/RD_HS2017script.pdf>`_
        by Marco Hutter (ETH Zurich)
     2. `Introduction to Inverse Kinematics <https://www.cs.cmu.edu/~15464-s13/lectures/lecture6/iksurvey.pdf>`_
-       by Samuel R. Buss (University of California, San Diego)
+       by Samuel R. Bus (University of California, San Diego)
 
     """
 

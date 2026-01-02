@@ -14,9 +14,10 @@ Currently, the following models are supported:
 
 from __future__ import annotations
 
-import torch
 from collections.abc import Sequence
 from typing import TYPE_CHECKING
+
+import torch
 
 from source.utils.assets import read_file
 from source.utils.types import ArticulationActions

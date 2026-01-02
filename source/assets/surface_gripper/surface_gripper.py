@@ -6,10 +6,10 @@
 from __future__ import annotations
 
 import logging
-import torch
 import warnings
 from typing import TYPE_CHECKING
 
+import torch
 from isaacsim.core.utils.extensions import enable_extension
 
 import source.sim as sim_utils

@@ -3,9 +3,9 @@
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
-import torch
 from dataclasses import MISSING
 
+import torch
 from isaacsim.core.api.simulation_context import SimulationContext
 from isaacsim.core.prims import SingleArticulation
 
@@ -16,7 +16,10 @@ enable_extension("isaacsim.robot_motion.lula")
 enable_extension("isaacsim.robot_motion.motion_generation")
 
 from isaacsim.robot_motion.motion_generation import ArticulationMotionPolicy
-from isaacsim.robot_motion.motion_generation.lula.motion_policies import RmpFlow, RmpFlowSmoothed
+from isaacsim.robot_motion.motion_generation.lula.motion_policies import (
+    RmpFlow,
+    RmpFlowSmoothed,
+)
 
 import source.sim.utils as sim_utils
 from source.utils import configclass

@@ -13,9 +13,8 @@ from abc import ABC, abstractmethod
 from collections.abc import Sequence
 from typing import TYPE_CHECKING, Any
 
-import omni.timeline
-
 import isaaclab.utils.string as string_utils
+import omni.timeline
 from isaaclab.utils import class_to_dict, string_to_callable
 
 from .manager_term_cfg import ManagerTermBaseCfg

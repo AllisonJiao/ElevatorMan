@@ -115,7 +115,9 @@ def create_prim(
         add_labels(prim, labels=[semantic_label], instance_name=semantic_type)
 
     # apply the transformations
-    from isaacsim.core.api.simulation_context.simulation_context import SimulationContext
+    from isaacsim.core.api.simulation_context.simulation_context import (
+        SimulationContext,
+    )
 
     if SimulationContext.instance() is None:
         # FIXME: remove this, we should never even use backend utils  especially not numpy ones

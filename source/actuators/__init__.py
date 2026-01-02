@@ -26,7 +26,13 @@ from .actuator_base import ActuatorBase
 from .actuator_base_cfg import ActuatorBaseCfg
 from .actuator_net import ActuatorNetLSTM, ActuatorNetMLP
 from .actuator_net_cfg import ActuatorNetLSTMCfg, ActuatorNetMLPCfg
-from .actuator_pd import DCMotor, DelayedPDActuator, IdealPDActuator, ImplicitActuator, RemotizedPDActuator
+from .actuator_pd import (
+    DCMotor,
+    DelayedPDActuator,
+    IdealPDActuator,
+    ImplicitActuator,
+    RemotizedPDActuator,
+)
 from .actuator_pd_cfg import (
     DCMotorCfg,
     DelayedPDActuatorCfg,

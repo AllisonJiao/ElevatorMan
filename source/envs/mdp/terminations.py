@@ -11,8 +11,9 @@ the termination introduced by the function.
 
 from __future__ import annotations
 
-import torch
 from typing import TYPE_CHECKING
+
+import torch
 
 from source.assets import Articulation, RigidObject
 from source.managers import SceneEntityCfg

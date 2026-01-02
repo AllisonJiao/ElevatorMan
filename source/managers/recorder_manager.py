@@ -8,13 +8,13 @@ from __future__ import annotations
 
 import enum
 import os
-import torch
 from collections.abc import Sequence
-from prettytable import PrettyTable
 from typing import TYPE_CHECKING
 
+import torch
 from isaaclab.utils import configclass
 from isaaclab.utils.datasets import EpisodeData, HDF5DatasetFileHandler
+from prettytable import PrettyTable
 
 from .manager_base import ManagerBase, ManagerTermBase
 from .manager_term_cfg import RecorderTermCfg

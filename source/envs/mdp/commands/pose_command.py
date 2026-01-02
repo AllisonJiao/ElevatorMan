@@ -7,14 +7,20 @@
 
 from __future__ import annotations
 
-import torch
 from collections.abc import Sequence
 from typing import TYPE_CHECKING
+
+import torch
 
 from source.assets import Articulation
 from source.managers import CommandTerm
 from source.markers import VisualizationMarkers
-from source.utils.math import combine_frame_transforms, compute_pose_error, quat_from_euler_xyz, quat_unique
+from source.utils.math import (
+    combine_frame_transforms,
+    compute_pose_error,
+    quat_from_euler_xyz,
+    quat_unique,
+)
 
 if TYPE_CHECKING:
     from source.envs import ManagerBasedEnv

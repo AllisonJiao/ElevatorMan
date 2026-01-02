@@ -5,15 +5,20 @@
 
 import builtins
 import logging
-import torch
 import warnings
 from collections.abc import Sequence
 from typing import Any
 
 import omni.physx
+import torch
 from isaacsim.core.simulation_manager import SimulationManager
 
-from source.managers import ActionManager, EventManager, ObservationManager, RecorderManager
+from source.managers import (
+    ActionManager,
+    EventManager,
+    ObservationManager,
+    RecorderManager,
+)
 from source.scene import InteractiveScene
 from source.sim import SimulationContext
 from source.sim.utils.stage import attach_stage_to_usd_context, use_stage
@@ -263,6 +268,7 @@ class ManagerBasedEnv:
             output_dir: The directory to export the IO descriptors to.
         """
         import os
+
         import yaml
 
         IO_descriptors = self.get_IO_descriptors
