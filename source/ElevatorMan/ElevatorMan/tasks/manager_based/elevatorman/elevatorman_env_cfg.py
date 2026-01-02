@@ -7,23 +7,26 @@ import math
 import os
 from dataclasses import MISSING
 
-import source.sim as sim_utils
-from cfg.agibot import AGIBOT_A2D_CFG
-from cfg.elevator import ELEVATOR_CFG
-from source.assets import ArticulationCfg, AssetBaseCfg
-from source.devices.device_base import DevicesCfg
-from source.devices.keyboard import Se3KeyboardCfg
-from source.devices.spacemouse import Se3SpaceMouseCfg
+import isaaclab.sim as sim_utils
+from isaaclab.assets import ArticulationCfg, AssetBaseCfg, RigidObjectCfg
+from isaaclab.devices.device_base import DevicesCfg
+from isaaclab.devices.keyboard import Se3KeyboardCfg
+from isaaclab.devices.spacemouse import Se3SpaceMouseCfg
+from isaaclab.envs import ManagerBasedRLEnvCfg
+from isaaclab.envs.mdp.actions.rmpflow_actions_cfg import RMPFlowActionCfg
+from isaaclab.managers import ObservationGroupCfg as ObsGroup
+from isaaclab.managers import ObservationTermCfg as ObsTerm
+from isaaclab.managers import SceneEntityCfg
+from isaaclab.managers import TerminationTermCfg as DoneTerm
+from isaaclab.scene import InteractiveSceneCfg
+from isaaclab.sensors import ContactSensorCfg, FrameTransformerCfg
+from isaaclab.sensors.frame_transformer.frame_transformer_cfg import OffsetCfg
+from isaaclab.sim.schemas.schemas_cfg import MassPropertiesCfg, RigidBodyPropertiesCfg
+from isaaclab.sim.spawners.from_files.from_files_cfg import GroundPlaneCfg, UsdFileCfg
+from isaaclab.utils import configclass
+from isaaclab.utils.assets import ISAAC_NUCLEUS_DIR, ISAACLAB_NUCLEUS_DIR
+
 from source.ElevatorMan.ElevatorMan.tasks.manager_based.manipulation.stack import mdp
-from source.envs import ManagerBasedRLEnvCfg
-from source.envs.mdp.actions.rmpflow_actions_cfg import RMPFlowActionCfg
-from source.managers import ObservationGroupCfg as ObsGroup
-from source.managers import ObservationTermCfg as ObsTerm
-from source.managers import TerminationTermCfg as DoneTerm
-from source.scene import InteractiveSceneCfg
-from source.sensors import FrameTransformerCfg
-from source.sensors.frame_transformer.frame_transformer_cfg import OffsetCfg
-from source.utils import configclass
 
 # from . import mdp
 
@@ -31,7 +34,9 @@ from source.utils import configclass
 # Pre-defined configs
 ##
 from source.markers.config import FRAME_MARKER_CFG  # isort: skip
-from source.controllers.config.rmp_flow import AGIBOT_RIGHT_ARM_RMPFLOW_CFG  # isort: skip
+from cfg.agibot import AGIBOT_A2D_CFG
+from cfg.elevator import ELEVATOR_CFG
+from source.controllers.cfg.rmp_flow import AGIBOT_RIGHT_ARM_RMPFLOW_CFG  # isort: skip
 
 ##
 # Scene definition
@@ -130,7 +135,7 @@ class ElevatormanEnvCfg(ManagerBasedRLEnvCfg):
     # Environment settings
     decimation: int = 3
     episode_length_s: float = 30.0
-
+    
     # Scene settings
     scene: ElevatormanSceneCfg = ElevatormanSceneCfg(num_envs=1, env_spacing=3.0, replicate_physics=False)
     # Basic settings
@@ -161,7 +166,6 @@ class ElevatormanEnvCfg(ManagerBasedRLEnvCfg):
         self.viewer.eye = [1.5, -1.0, 1.5]
         self.viewer.lookat = [0.5, 0.0, 0.0]
 
-
 class RmpFlowAgibotPlaceToy2BoxEnvCfg(ElevatormanEnvCfg):
 
     def __post_init__(self):
@@ -170,15 +174,16 @@ class RmpFlowAgibotPlaceToy2BoxEnvCfg(ElevatormanEnvCfg):
 
         # Events are not needed for now - events is set to None in base class
 
-        # Set Agibot as robot with custom position and rotation
-        # Position: (x, y, z) in meters
-        # Rotation: (w, x, y, z) quaternion format
+        # Set Agibot as robot
         self.scene.robot = AGIBOT_A2D_CFG.replace(
             prim_path="{ENV_REGEX_NS}/Robot",
+            spawn=AGIBOT_A2D_CFG.spawn.replace(
+                scale=(1.2, 1.2, 1.2),
+            ),
             init_state=ArticulationCfg.InitialStateCfg(
                 joint_pos=AGIBOT_A2D_CFG.init_state.joint_pos,  # preserve original joint positions
                 pos=(-2.0, -0.2, 0.0),
-                rot=(math.sqrt(0.5), 0.0, 0.0, -math.sqrt(0.5)),  # (w,x,y,z)
+                rot=(math.sqrt(0.5), 0.0, 0.0, -math.sqrt(0.5)), # (w,x,y,z)
             ),
         )
 
